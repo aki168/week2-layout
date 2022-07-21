@@ -10,12 +10,6 @@
   line-height: 84px;
 }
 
-// @mixin set-hover {
-//     &:hover {
-//       opacity: 0.7
-//   }
-// }
-
 @mixin set-hover {
   img:hover {
     opacity: 0.7
