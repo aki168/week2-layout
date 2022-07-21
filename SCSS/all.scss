@@ -5,109 +5,210 @@
 
 
 body {
+  @include set-hover;
   font-family: $font-family-base;
   color: black;
   font-style: italic;
 }
 
-.hero--wrap{
+.hero--wrap {
   background-image: url($path+'banner.png');
   padding: 308px 0;
   background-size: cover;
+  background-position: center center;
 }
 
-.hero{
-  width: 305px;
-  margin: 0 auto;
-  &__title{
+.hero {
+  @include container;
+
+  &__title {
+    display: inline-block;
     color: white;
     font-size: 80px;
     line-height: 106px;
     margin-bottom: 32px;
-    p{
+
+    p {
       font-size: 24px;
       line-height: 42px;
+      text-align: left;
     }
   }
-  &__content{
-    color:white;
+
+  &__content {
+    color: white;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 32px;
   }
-  &__list{
-    display: flex;
 
-    &__item{
-      margin-right:16px ;
-  }
-    &__item:last-child{
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+      margin-right: 16px;
+    }
+
+    &__item:last-child {
       margin: 0;
     }
-}
-}
-
-.about{
-  &__title{
-
   }
-  &__main-pic{
-    
-  }
-  &__content{
-
-  }
-  &__list{
-
-  }
-  
 }
 
-.brand{
-  &__title{
+.about {
+  @include container;
+  padding-top: 56px;
+  font-weight: 700;
 
+  &__title {
+    @include title;
+    margin-bottom: 40px;
   }
-  &__content{
 
+  &__main-pic {
+    margin-bottom: 20px;
   }
-  &__photo-list{
-    &__one-item{
 
+  &__content {
+    font-size: 24px;
+    padding-bottom: 24px;
+
+    &--profile {
+      line-height: 42px;
+      margin-bottom: 8px;
     }
-    &__two-item{
 
-    }
-  }
-}
-
-.works{
-  &__title{
-
-  }
-  &__content{
-
-  }
-  &__photo-list{
-    &__three-item{
-      
-    }
-    &__two-item{
-      
+    &--school {
+      line-height: 36px;
     }
   }
 
+  &__list {
+    margin: 0 auto;
+    width: 384px;
+    border-top: 1px solid black;
+    padding-top: 28px;
+    padding-bottom: 28px;
+
+    li {
+      font-size: 24px;
+      line-height: 42px;
+      margin-bottom: 28px;
+    }
+
+    i {
+      color: $wine;
+    }
+  }
 }
 
-.contact{
-  &__title{
+.brand--wrap {
+  background-color: black;
+}
 
+.brand {
+  @include container;
+  color: white;
+  padding-top: 56px;
+  padding-bottom: 120px;
+
+  &__title {
+    @include title;
   }
-  &__list{
-    a{
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 42px;
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 68px;
+  }
+
+  &__photo-list {
+
+    &__one-item {
+      margin-bottom: 40px;
+    }
+
+    &__two-item {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.works {
+  @include container;
+  padding-top: 56px;
+  padding-bottom: 144px;
+
+  &__title {
+    @include title;
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 56px;
+  }
+
+  &__photo-list {
+
+    figcaption {
+      font-size: 20px;
+      line-height: 42px;
+    }
+
+    &__three-item {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    &__two-item {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+
+}
+
+.contact--wrap{
+  background: #000;
+}
+
+.contact {
+  @include container;
+  color: white;
+  padding: 64px 0;
+
+  &__title {
+    @include title;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    li{
+      margin-bottom: 16px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    a {
+      color: white;
       text-decoration: none;
     }
-    a:hover{
+
+    a:hover {
       color: $wine;
     }
   }

@@ -1,11 +1,23 @@
 @mixin container {
-  max-width:1200px;
+  text-align: center;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-@mixin title{
+@mixin title {
   font-weight: 500;
   font-size: 64px;
   line-height: 84px;
 }
 
+// @mixin set-hover {
+//     &:hover {
+//       opacity: 0.7
+//   }
+// }
+
+@mixin set-hover {
+  img:hover {
+    opacity: 0.7
+}
+}
