@@ -94,8 +94,10 @@ body img:hover {
   font-size: 80px;
   line-height: 106px;
   margin-bottom: 32px;
+  font-weight: 900;
 }
 .hero__title p {
+  font-weight: normal;
   font-size: 24px;
   line-height: 42px;
   text-align: left;
@@ -149,8 +151,7 @@ body img:hover {
   margin: 0 auto;
   width: 384px;
   border-top: 1px solid black;
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding: 28px 0;
 }
 .about__list li {
   font-size: 24px;
@@ -197,6 +198,12 @@ body img:hover {
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
+@media (max-width: 1200px) {
+  .brand__photo-list__two-item {
+    flex-direction: column;
+    gap: 40px 0;
+  }
+}
 
 .works {
   text-align: center;
@@ -220,12 +227,7 @@ body img:hover {
   font-size: 20px;
   line-height: 42px;
 }
-.works__photo-list__three-item {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.works__photo-list__two-item {
+.works__photo-list__three-item, .works__photo-list__two-item {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;

@@ -27,8 +27,10 @@ body {
     font-size: 80px;
     line-height: 106px;
     margin-bottom: 32px;
+    font-weight: 900;
 
     p {
+      font-weight: normal;
       font-size: 24px;
       line-height: 42px;
       text-align: left;
@@ -89,8 +91,7 @@ body {
     margin: 0 auto;
     width: 384px;
     border-top: 1px solid black;
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding: 28px 0;
 
     li {
       font-size: 24px;
@@ -142,6 +143,13 @@ body {
       flex-wrap: wrap;
       margin-bottom: 40px;
     }
+
+    @media (max-width: 1200px) {
+      &__two-item {
+        flex-direction: column;
+        gap: 40px 0;
+      }
+    }
   }
 }
 
@@ -168,22 +176,18 @@ body {
       line-height: 42px;
     }
 
-    &__three-item {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-
+    &__three-item,
     &__two-item {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
     }
+
   }
 
 }
 
-.contact--wrap{
+.contact--wrap {
   background: #000;
 }
 
@@ -198,11 +202,12 @@ body {
   }
 
   &__list {
-    li{
+    li {
       margin-bottom: 16px;
       font-size: 24px;
       line-height: 36px;
     }
+
     a {
       color: white;
       text-decoration: none;
